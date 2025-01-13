@@ -10,90 +10,71 @@
 
 <body>
     <div class="container">
-        <div class="start-screen hide">
+        <!-- Tela Inicial -->
+        <section class="start-screen">
             <h1 class="heading">Quiz</h1>
             <div class="settings">
-                <label for="categoty">Selecione a categoria</label>
-                <select name="" id="category">
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                    <option value="15">15</option>
-                    <option value="20">20</option>
+                <label for="category">Category</label>
+                <select id="category">
+                    <option value="" disabled selected>Selecione uma categoria</option>
+                    <option value="Code">Code</option>
                 </select>
 
-                <label for="tags">selecione as tags</label>
-                <select name="" id="tags">
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                    <option value="15">15</option>
-                    <option value="20">20</option>
+                <label for="tags">Tags</label>
+                <select id="tags">
+                    <option value="" disabled selected>Selecione uma tag</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Python">Python</option>
+                    <option value="PHP">PHP</option>
+                    <option value="HTML">HTML</option>
                 </select>
 
-                <label for="difficulty">Selecione a dificuldade</label>
-                <select name="" id="difficulty">
+                <label for="difficulty">Difficulty</label>
+                <select id="difficulty">
+                    <option value="" disabled selected>Selecione a dificuldade</option>
                     <option value="Easy">Easy</option>
                     <option value="Medium">Medium</option>
                     <option value="Hard">Hard</option>
                 </select>
 
-                <label for="num-questions">Número de perguntas</label>
-                <select name="" id="num-questions">
+                <label for="limit">Number</label>
+                <select id="limit">
                     <option value="5">5</option>
                     <option value="10">10</option>
                     <option value="15">15</option>
                     <option value="20">20</option>
                 </select>
             </div>
-            <button class="start-btn">Iniciar</button>
-        </div>
-        <div class="quiz hide">
+            <button class="btn start">Start</button>
+        </section>
+
+        <!-- Quiz -->
+        <section class="quiz hide">
             <div class="question-wrapper">
                 <div class="number">
-                    Questão <span class="current">1</span>
-                    <span class="total">/10</span>
+                    Questão <span class="current">1</span>/<span class="total">10</span>
                 </div>
-
-                <div class="question">Essa é a questão</div>
+                <div class="question">Carregando questão...</div>
             </div>
-            <div class="answer-wrapper">
-                <div class="answer selected">
-                    <span class="text">Resposta</span>
-                    <span class="checkbox">
-                        <span class="icon">√</span>
-                    </span>
-                </div>
+            <div class="answer-wrapper"></div>
+            <button class="btn submit">Submit</button>
+            <button class="btn next">Next</button>
+        </section>
 
-                <div class="answer">
-                    <span class="text">Resposta</span>
-                    <span class="checkbox">
-                        <span class="icon">√</span>
-                    </span>
-                </div>
-
-                <div class="answer">
-                    <span class="text">Resposta</span>
-                    <span class="checkbox">
-                        <span class="icon">√</span>
-                    </span>
-                </div>
-            </div>
-            <button class="btn submit">Enviar</button>
-            <button class="btn next">Proxima</button>
-        </div>
-        <div class="end-screen">
-            <h1 class="heading">Quiz</h1>
+        <!-- Tela Final -->
+        <section class="end-screen hide">
+            <h1 class="heading">Quiz Finished!</h1>
             <div class="score">
-                <div class="score-text">Sua Pontuação:</div>
+                <div>Your Score:</div>
                 <div>
-                    <div class="final-score">0</div>
-                    <div class="total-score">/10</div>
+                    <span class="final-score">0</span>/<span class="total-score">10</span>
                 </div>
             </div>
-            <button class="btn restart">Reiniciar</button>
-        </div>
+            <button class="btn restart">Restart</button>
+        </section>
     </div>
 
-    <script src="api.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
