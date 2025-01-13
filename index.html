@@ -1,20 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Quiz</title>
 </head>
+
 <body>
-    <div class="quiz">
-        <h1>Quiz</h1>
-        <div class="question">
+    <div class="container">
+        <div class="start-screen hide">
+            <h1 class="heading">Quiz</h1>
+            <div class="settings">
+                <label for="categoty">Selecione a categoria</label>
+                <select name="" id="category">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
 
+                <label for="tags">selecione as tags</label>
+                <select name="" id="tags">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+
+                <label for="difficulty">Selecione a dificuldade</label>
+                <select name="" id="difficulty">
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                </select>
+
+                <label for="num-questions">Número de perguntas</label>
+                <select name="" id="num-questions">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <button class="start-btn">Iniciar</button>
         </div>
-        <div class="answers">
+        <div class="quiz hide">
+            <div class="question-wrapper">
+                <div class="number">
+                    Questão <span class="current">1</span>
+                    <span class="total">/10</span>
+                </div>
 
+                <div class="question">Essa é a questão</div>
+            </div>
+            <div class="answer-wrapper">
+                <div class="answer selected">
+                    <span class="text">Resposta</span>
+                    <span class="checkbox">
+                        <span class="icon">√</span>
+                    </span>
+                </div>
+
+                <div class="answer">
+                    <span class="text">Resposta</span>
+                    <span class="checkbox">
+                        <span class="icon">√</span>
+                    </span>
+                </div>
+
+                <div class="answer">
+                    <span class="text">Resposta</span>
+                    <span class="checkbox">
+                        <span class="icon">√</span>
+                    </span>
+                </div>
+            </div>
+            <button class="btn submit">Enviar</button>
+            <button class="btn next">Proxima</button>
+        </div>
+        <div class="end-screen">
+            <h1 class="heading">Quiz</h1>
+            <div class="score">
+                <div class="score-text">Sua Pontuação:</div>
+                <div>
+                    <div class="final-score">0</div>
+                    <div class="total-score">/10</div>
+                </div>
+            </div>
+            <button class="btn restart">Reiniciar</button>
         </div>
     </div>
+
+    <script src="api.js"></script>
 </body>
+
 </html>
